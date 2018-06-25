@@ -112,3 +112,265 @@ puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
 puma (3.11.4) lib/puma/server.rb:446:in `process_client'
 puma (3.11.4) lib/puma/server.rb:306:in `block in run'
 puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateUsers (20180618212256)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180618212256_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180618212256"]]
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-18 21:29:31.187086"], ["updated_at", "2018-06-18 21:29:31.187086"]]
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+Migrating to CreateProducts (20180618221052)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180618221052_create_products.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "price" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180618221052_create_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180618221052"]]
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (27.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/john.kariungi/.rvm/gems/ruby-2.3.1/gems/rake-12.3.1/lib/rake/task.rb:271
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (1.9ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Lightweight Iron Watch"], ["price", 99.61], ["created_at", "2018-06-18 22:12:23.573645"], ["updated_at", "2018-06-18 22:12:23.573645"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aerodynamic Granite Coat"], ["price", 92.95], ["created_at", "2018-06-18 22:12:23.581198"], ["updated_at", "2018-06-18 22:12:23.581198"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aerodynamic Silk Plate"], ["price", 99.85], ["created_at", "2018-06-18 22:12:23.585091"], ["updated_at", "2018-06-18 22:12:23.585091"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Incredible Linen Lamp"], ["price", 50.77], ["created_at", "2018-06-18 22:12:23.594011"], ["updated_at", "2018-06-18 22:12:23.594011"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Rustic Linen Bench"], ["price", 69.59], ["created_at", "2018-06-18 22:12:23.597694"], ["updated_at", "2018-06-18 22:12:23.597694"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ergonomic Cotton Keyboard"], ["price", 54.09], ["created_at", "2018-06-18 22:12:23.602212"], ["updated_at", "2018-06-18 22:12:23.602212"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.8ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Synergistic Bronze Table"], ["price", 95.27], ["created_at", "2018-06-18 22:12:23.606323"], ["updated_at", "2018-06-18 22:12:23.606323"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Fantastic Bronze Chair"], ["price", 92.12], ["created_at", "2018-06-18 22:12:23.610821"], ["updated_at", "2018-06-18 22:12:23.610821"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Small Copper Hat"], ["price", 48.55], ["created_at", "2018-06-18 22:12:23.614340"], ["updated_at", "2018-06-18 22:12:23.614340"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Fantastic Steel Bag"], ["price", 1.18], ["created_at", "2018-06-18 22:12:23.618327"], ["updated_at", "2018-06-18 22:12:23.618327"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.9ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Heavy Duty Steel Coat"], ["price", 79.0], ["created_at", "2018-06-18 22:12:23.622494"], ["updated_at", "2018-06-18 22:12:23.622494"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Gorgeous Rubber Shoes"], ["price", 81.8], ["created_at", "2018-06-18 22:12:23.627292"], ["updated_at", "2018-06-18 22:12:23.627292"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Practical Copper Pants"], ["price", 52.11], ["created_at", "2018-06-18 22:12:23.631759"], ["updated_at", "2018-06-18 22:12:23.631759"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Heavy Duty Wooden Hat"], ["price", 95.1], ["created_at", "2018-06-18 22:12:23.635673"], ["updated_at", "2018-06-18 22:12:23.635673"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.8ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Lightweight Aluminum Bench"], ["price", 60.36], ["created_at", "2018-06-18 22:12:23.639617"], ["updated_at", "2018-06-18 22:12:23.639617"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Synergistic Plastic Car"], ["price", 37.28], ["created_at", "2018-06-18 22:12:23.644211"], ["updated_at", "2018-06-18 22:12:23.644211"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Fantastic Linen Hat"], ["price", 13.27], ["created_at", "2018-06-18 22:12:23.648714"], ["updated_at", "2018-06-18 22:12:23.648714"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Gorgeous Silk Shoes"], ["price", 92.31], ["created_at", "2018-06-18 22:12:23.652985"], ["updated_at", "2018-06-18 22:12:23.652985"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Fantastic Bronze Wallet"], ["price", 42.55], ["created_at", "2018-06-18 22:12:23.657512"], ["updated_at", "2018-06-18 22:12:23.657512"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Aerodynamic Iron Lamp"], ["price", 17.4], ["created_at", "2018-06-18 22:12:23.662571"], ["updated_at", "2018-06-18 22:12:23.662571"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Heavy Duty Leather Bag"], ["price", 24.67], ["created_at", "2018-06-18 22:12:23.666739"], ["updated_at", "2018-06-18 22:12:23.666739"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (1.0ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Heavy Duty Bronze Gloves"], ["price", 53.16], ["created_at", "2018-06-18 22:12:23.671349"], ["updated_at", "2018-06-18 22:12:23.671349"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Heavy Duty Marble Pants"], ["price", 23.37], ["created_at", "2018-06-18 22:12:23.678219"], ["updated_at", "2018-06-18 22:12:23.678219"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ergonomic Paper Pants"], ["price", 46.93], ["created_at", "2018-06-18 22:12:23.682038"], ["updated_at", "2018-06-18 22:12:23.682038"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Small Marble Plate"], ["price", 20.77], ["created_at", "2018-06-18 22:12:23.685681"], ["updated_at", "2018-06-18 22:12:23.685681"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Small Bronze Chair"], ["price", 13.51], ["created_at", "2018-06-18 22:12:23.694062"], ["updated_at", "2018-06-18 22:12:23.694062"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Synergistic Paper Car"], ["price", 89.51], ["created_at", "2018-06-18 22:12:23.698454"], ["updated_at", "2018-06-18 22:12:23.698454"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Durable Cotton Chair"], ["price", 87.49], ["created_at", "2018-06-18 22:12:23.701904"], ["updated_at", "2018-06-18 22:12:23.701904"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.9ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Intelligent Copper Bench"], ["price", 12.1], ["created_at", "2018-06-18 22:12:23.705656"], ["updated_at", "2018-06-18 22:12:23.705656"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Ergonomic Marble Computer"], ["price", 99.93], ["created_at", "2018-06-18 22:12:23.711086"], ["updated_at", "2018-06-18 22:12:23.711086"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
